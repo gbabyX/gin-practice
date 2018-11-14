@@ -1,8 +1,11 @@
 package main
 
-import "./routes"
+import (
+	"./conf"
+)
 
 func main() {
-	r := routes.InitRouter()
-	r.Run()
+	conf.InitConf()
+	//r := routes.InitRouter()
+	//r.Run()
 }
