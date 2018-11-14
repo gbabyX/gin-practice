@@ -1,6 +1,9 @@
 package routes
 
-import "github.com/gin-gonic/gin"
+import (
+	"../service/index"
+	"github.com/gin-gonic/gin"
+)
 
 func init() {
 
@@ -8,6 +11,6 @@ func init() {
 
 func InitRouter() *gin.Engine {
 	router := gin.New()
-	router.GET("/ping", controllers.Pong())
+	router.GET("/ping", index.Pong)
 	return router
 }
